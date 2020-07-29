@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_06l8a1u" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.1.1">
+  <decision id="fish" name="fish">
+    <decisionTable id="DecisionTable_12id804">
+      <input id="Input_1" camunda:inputVariable="season">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_0p5so05">
+          <text>"spring","summer"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_1onfm8w" camunda:inputVariable="count">
+        <inputExpression id="LiteralExpression_17k9i2x" typeRef="integer">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" name="place" typeRef="string">
+        <outputValues id="UnaryTests_13hntge">
+          <text>"fuzhou","xiamen","putian","quanzhou"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_1fppehm">
+        <inputEntry id="UnaryTests_1c4o2gd">
+          <text>"spring"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0aflb85">
+          <text>&lt;= 5</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_13qb2ra">
+          <text>"fuzhou"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0svp1t8">
+        <inputEntry id="UnaryTests_0h91zdt">
+          <text>"spring"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_023swmk">
+          <text>&gt; 5</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_19x654j">
+          <text>"xiamen"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1aptdgk">
+        <inputEntry id="UnaryTests_0snd4h6">
+          <text>"summer"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06erd4e">
+          <text>&lt;= 5</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1nnlrpu">
+          <text>"putian"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0dfoz51">
+        <inputEntry id="UnaryTests_1d2f64u">
+          <text>"summer"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iqgv8f">
+          <text>&gt; 5</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1xjqmd6">
+          <text>"quanzhou"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="fish">
+        <dc:Bounds height="80" width="180" x="160" y="80" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

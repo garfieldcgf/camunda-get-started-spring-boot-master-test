@@ -1,0 +1,17 @@
+camunda.bpm:
+  admin-user:
+    id: demo
+    password: demo
+    firstName: Demo
+  filter:
+    create: All tasks
+
+#mysql 数据库配置
+spring:
+  application:
+    name: wct-iot
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost/Temp?serverTimezone=GMT
+    username: test
+    password: 123456
